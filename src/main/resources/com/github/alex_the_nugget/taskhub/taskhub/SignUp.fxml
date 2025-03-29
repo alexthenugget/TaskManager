@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1050.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.alex_the_nugget.taskhub.taskhub.controllers.SignUpController">
+    <children>
+        <Pane layoutX="148.0" layoutY="110.0" prefHeight="456.0" prefWidth="754.0" styleClass="element" stylesheets="@style.css">
+            <children>
+                <AnchorPane prefHeight="456.0" prefWidth="352.0" styleClass="anchorpane2">
+                    <children>
+                        <Text fill="WHITE" layoutX="74.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER" wrappingWidth="202.96900939941406">
+                            <font>
+                                <Font name="Nexa-Trial Black" size="37.0" />
+                            </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="77.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up and start your journey with us!" textAlignment="CENTER" wrappingWidth="196.0">
+                            <font>
+                                <Font name="Lato Regular" size="19.0" />
+                            </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="76.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
+                            <font>
+                                <Font name="Lato Regular" size="18.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="signInButton" layoutX="63.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleSignInButtonAction" prefHeight="28.0" prefWidth="225.0" styleClass="signup" text="Sign in" textFill="WHITE">
+                            <font>
+                                <Font name="Lato Regular" size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="login" layoutX="422.0" layoutY="211.0" prefHeight="35.0" prefWidth="282.0" promptText="Login" styleClass="forms">
+                    <font>
+                        <Font name="Lato Regular" size="15.0" />
+                    </font></TextField>
+                <TextField fx:id="password" layoutX="422.0" layoutY="261.0" prefHeight="35.0" prefWidth="282.0" promptText="Password" styleClass="forms">
+                    <font>
+                        <Font name="Lato Regular" size="15.0" />
+                    </font></TextField>
+                <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="508.0" layoutY="51.0">
+                    <image>
+                        <Image url="@images/task-list.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#e56b6f" layoutX="436.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task" textAlignment="CENTER" wrappingWidth="72.0">
+                    <font>
+                        <Font name="Drina" size="40.0" />
+                    </font>
+                </Text>
+                <Text fill="#e56b6f" layoutX="580.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager" textAlignment="CENTER" wrappingWidth="129.6910400390625">
+                    <font>
+                        <Font name="Drina" size="40.0" />
+                    </font>
+                </Text>
+                <Button fx:id="signUpButton" layoutX="451.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleSignUpButtonAction" prefHeight="28.0" prefWidth="225.0" styleClass="signin" text="Sign up" textFill="WHITE">
+                    <font>
+                        <Font name="Lato Regular" size="16.0" />
+                    </font>
+            </Button>
+            <TextField fx:id="fullName" layoutX="422.0" layoutY="162.0" prefHeight="35.0" prefWidth="282.0" promptText="Full name" styleClass="forms">
+               <font>
+                  <Font name="Lato Regular" size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="response" layoutX="436.0" layoutY="307.0" prefHeight="22.0" prefWidth="258.0" textAlignment="RIGHT" textFill="#e56b6f">
+               <font>
+                  <Font name="Lato Regular" size="12.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</Pane>

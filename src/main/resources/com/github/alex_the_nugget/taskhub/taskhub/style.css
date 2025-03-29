@@ -1,0 +1,47 @@
+.backgroundColor{
+    -fx-background-color: #ffffff;
+}
+
+.element {
+  -fx-background-radius: 15;
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 9, 0, 0, 0);
+}
+
+.element2 {
+  -fx-background-radius: 15;
+  -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 9, 0, 0, 0);
+}
+
+.anchorpane {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 0 15 15 0;
+}
+
+.anchorpane2 {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 15 0 0 15;
+}
+
+.signin {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 25;
+}
+
+.signup {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 25;
+}
+
+.submit {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 15;
+}
+
+.forms {
+    -fx-background-radius: 25;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
