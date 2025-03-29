@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1050.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.alex_the_nugget.taskhub.taskhub.controllers.manager.ManagerAssignTasksController">
+   <children>
+      <Pane prefHeight="675.0" prefWidth="69.0" styleClass="leftpanel">
+         <children>
+            <ImageView fx:id="editProfile" fitHeight="48.0" fitWidth="50.0" layoutX="10.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/task-list.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageAssignTask" fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="80.0">
+               <image>
+                  <Image url="@images/group_13466526.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageMyTasks" fitHeight="50.0" fitWidth="50.0" layoutX="8.0" layoutY="148.0" onMouseClicked="#handleMyTasksClick">
+               <image>
+                  <Image url="@images/free-icon-to-do-list-1950630.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageStatistics" fitHeight="46.0" fitWidth="46.0" layoutX="10.0" layoutY="214.0" onMouseClicked="#showStatistics">
+               <image>
+                  <Image url="@images/free-icon-line-chart-126425.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ComboBox fx:id="chooseEmployee" layoutX="218.0" layoutY="144.0" prefHeight="29.0" prefWidth="405.0" promptText="Employee" styleClass="combo-box1" />
+      <TextField fx:id="taskDescription" alignment="TOP_LEFT" layoutX="216.0" layoutY="417.0" prefHeight="154.0" prefWidth="669.0" promptText="Add description" styleClass="date">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <DatePicker fx:id="startDate" layoutX="216.0" layoutY="271.0" prefHeight="38.0" prefWidth="669.0" promptText="Start" styleClass="date" />
+      <DatePicker fx:id="endDate" layoutX="216.0" layoutY="342.0" prefHeight="38.0" prefWidth="669.0" promptText="End" styleClass="date" />
+      <TextField fx:id="taskName" alignment="TOP_LEFT" layoutX="218.0" layoutY="207.0" prefHeight="29.0" prefWidth="669.0" promptText="Enter the name of the task" styleClass="combo-box">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font></TextField>
+      <Text fill="#e56b6f" layoutX="348.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign a new task" textAlignment="CENTER" wrappingWidth="405.3689727783203">
+         <font>
+            <Font name="Nexa-Trial Black" size="37.0" />
+         </font>
+      </Text>
+      <Text fill="#e56b6f" layoutX="347.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign new tasks to employees" textAlignment="CENTER" wrappingWidth="407.20001220703125">
+         <font>
+            <Font name="Lato Regular" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#717171" layoutX="218.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select an employee from the list" wrappingWidth="407.20001220703125">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#717171" layoutX="216.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the start date" wrappingWidth="407.20001220703125">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#717171" layoutX="213.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the end date" wrappingWidth="407.20001220703125">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#717171" layoutX="215.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the task name" wrappingWidth="407.20001220703125">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#717171" layoutX="215.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a description for the issue (max 2000 symbols)" wrappingWidth="407.20001220703125">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="assignTaskButton" layoutX="382.0" layoutY="607.0" mnemonicParsing="false" onAction="#handleAssignTaskButton" prefHeight="29.0" prefWidth="338.0" styleClass="signin" stylesheets="@style.css" text="Assign the task" textFill="WHITE">
+         <font>
+            <Font name="Lato Regular" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="chooseTag" layoutX="629.0" layoutY="144.0" prefHeight="29.0" prefWidth="258.0" promptText="Tag" styleClass="combo-box2" />
+      <Text fill="#717171" layoutX="629.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a tag" wrappingWidth="258.0">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="response" alignment="CENTER" contentDisplay="CENTER" layoutX="386.0" layoutY="581.0" prefHeight="17.0" prefWidth="330.0" textAlignment="CENTER" textFill="#e56b6f">
+         <font>
+            <Font name="Lato Regular" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

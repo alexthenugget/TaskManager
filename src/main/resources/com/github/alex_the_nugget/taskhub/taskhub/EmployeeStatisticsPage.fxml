@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1050.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.alex_the_nugget.taskhub.taskhub.controllers.employee.EmployeeStatisticsController">
+   <children>
+      <Pane prefHeight="675.0" prefWidth="69.0" styleClass="leftpanel">
+         <children>
+            <ImageView fx:id="editProfile" fitHeight="48.0" fitWidth="50.0" layoutX="10.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/task-list.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageMyTasks" fitHeight="50.0" fitWidth="50.0" layoutX="7.0" layoutY="74.0" onMouseClicked="#handleMyTasksClick">
+               <image>
+                  <Image url="@images/free-icon-to-do-list-1950630.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageStatistics" fitHeight="46.0" fitWidth="46.0" layoutX="12.0" layoutY="134.0">
+               <image>
+                  <Image url="@images/free-icon-line-chart-126425.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#e56b6f" layoutX="348.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Statistics" textAlignment="CENTER" wrappingWidth="405.3689727783203">
+         <font>
+            <Font name="Nexa-Trial Black" size="37.0" />
+         </font>
+      </Text>
+      <Label fx:id="response" layoutX="395.0" layoutY="83.0" prefHeight="17.0" prefWidth="311.0" textAlignment="CENTER" textFill="#e56b6f">
+         <font>
+            <Font name="Lato Regular" size="12.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="tasksPieChart" layoutX="50.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0" title="Task Status Distribution" />
+      <BarChart fx:id="monthlyTasksChart" layoutX="500.0" layoutY="100.0" prefHeight="450.0" prefWidth="450.0">
+         <xAxis>
+            <CategoryAxis fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" />
+         </yAxis>
+      </BarChart>
+      <Text fill="#e56b6f" layoutX="247.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This page displays statistics on tasks by status and your performance by month." textAlignment="CENTER" wrappingWidth="606.4000396728516">
+         <font>
+            <Font name="Lato Regular" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

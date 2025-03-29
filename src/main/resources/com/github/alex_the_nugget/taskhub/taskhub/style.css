@@ -1,0 +1,144 @@
+.backgroundColor{
+    -fx-background-color: #ffffff;
+}
+
+.fullelement {
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 9, 0, 0, 0);
+    -fx-background-radius: 15 15 15 15;
+}
+
+.element {
+  -fx-background-radius: 15;
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 9, 0, 0, 0);
+}
+
+.element2 {
+  -fx-background-radius: 15;
+  -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 9, 0, 0, 0);
+}
+
+.anchorpane {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 0 15 15 0;
+}
+
+.anchorpane2 {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 15 0 0 15;
+}
+
+.signin {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 25;
+}
+
+.signup {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 25;
+}
+
+.submit {
+    -fx-background-color: linear-gradient(#eaac8b, #e56b6f);
+    -fx-background-radius: 15;
+}
+
+.forms {
+    -fx-background-radius: 25;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.date {
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.date .list-cell,
+.date .text-input {
+    -fx-text-fill: #808080;
+    -fx-font-family: 'Lato';
+    -fx-font-size: 15px;
+}
+
+.combo-box1 {
+    -fx-background-radius: 15 0 0 15;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.combo-box2 {
+    -fx-background-radius: 15 0 0 15;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.combo-box {
+    -fx-background-radius: 25;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.combo-box .list-cell,
+.combo-box .text-input {
+    -fx-text-fill: #808080;
+    -fx-font-family: 'Lato';
+    -fx-font-size: 15px;
+}
+
+.leftpanel {
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+}
+
+.scroll-box {
+    -fx-background-color: #ffffff;
+    border-width: 0;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 2em;
+    -fx-pref-width: 15px;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 2em;
+    -fx-pref-height: 15px;
+}
+
+.chart-title {
+    -fx-font-family: "Lato";
+    -fx-font-size: 19px;
+}
+
+.chart-legend {
+    -fx-font-family: "Lato";
+    -fx-font-size: 12px;
+}
+
+.chart-legend-item {
+    -fx-font-family: "Lato";
+    -fx-font-size: 12px;
+}
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+}
+
+.axis {
+    -fx-font-family: 'Lato';
+    -fx-font-size: 10px;
+    -fx-tick-label-fill: #333333;
+}
+
+.axis-label {
+    -fx-font-family: 'Lato';
+    -fx-font-size: 12px;
+}
