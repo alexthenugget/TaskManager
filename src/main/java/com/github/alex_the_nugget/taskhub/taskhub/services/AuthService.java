@@ -9,7 +9,7 @@ import java.sql.Connection;
 
 public class AuthService {
     private static final Logger log = LoggerFactory.getLogger(AuthService.class);
-    private DataBase userServiceDB = new DataBase();
+    private final DataBase userServiceDB = new DataBase();
     private final String nameDB = "TaskManager_DB";
     private final String nameUsersTable = "SystemUsers";
 
@@ -29,6 +29,25 @@ public class AuthService {
         }
         catch(Exception e){
             log.error("e: ", e);
+        }
+    }
+
+    public void updateAdditionalInfo(String login, String position, String department) {
+        try (Connection conn = userServiceDB.connectToDB(nameDB)) {
+            userServiceDB.updateUserPositionAndDepartment(conn, nameUsersTable, login, position, department);
+        }
+        catch(Exception e){
+            log.error("e: ", e);
+        }
+    }
+
+    public String returnUsersPosition(String login){
+        try (Connection conn = userServiceDB.connectToDB(nameDB)) {
+            return userServiceDB.findPositionByLogin(conn, nameUsersTable, login);
+        }
+        catch(Exception e){
+            log.error("e: ", e);
+            return "";
         }
     }
 }

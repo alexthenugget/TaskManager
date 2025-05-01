@@ -39,12 +39,13 @@ public class SignUpController {
         String passwordText = password.getText();
         if (nameText.isEmpty() || loginText.isEmpty() || passwordText.isEmpty()) {
             response.setText("There is an empty field");
-        }
-        else {
+        } else {
             authService.signUpAddUser(nameText, loginText, passwordText);
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/github/alex_the_nugget/taskhub/taskhub/BotForm.fxml"));
                 Parent root = loader.load();
+                BotFormController botFormController = loader.getController();
+                botFormController.setUserLogin(loginText);
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);

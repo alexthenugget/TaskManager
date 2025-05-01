@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import com.github.alex_the_nugget.taskhub.taskhub.services.AuthService;
 
+import java.io.IOException;
+
 public class SignInController {
 
     private final AuthService authService = new AuthService();
@@ -37,8 +39,30 @@ public class SignInController {
             response.setText("There is an empty field");
         }
         else {
-            if (authService.signInCheckingService(loginText, passwordText)){
-                response.setText("Welcome!");
+            if (authService.signInCheckingService(loginText, passwordText)) {
+                try {
+                    String position = authService.returnUsersPosition(loginText);
+                    String fxmlFile = position.equals("Manager")
+                            ? "/com/github/alex_the_nugget/taskhub/taskhub/AssignTasksPage.fxml"
+                            : "/path/to/employee_interface.fxml";
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+                    Parent root = loader.load();
+
+                    if (position.equals("Manager")) {
+                        ManagerAssignTasksController managerController = loader.getController();
+                        managerController.setUserLogin(loginText);
+                    } else {
+                        EmployeeCheckTasksController employeeCheckTasksController = loader.getController();
+                        employeeCheckTasksController.setUserLogin(loginText);
+                    }
+
+                    Stage stage = (Stage) signInButton.getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
             else {
                 response.setText("There is no such user in the system");

@@ -2,6 +2,13 @@
     -fx-background-color: #ffffff;
 }
 
+.fullelement {
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 9, 0, 0, 0);
+    -fx-background-radius: 15 15 15 15;
+}
+
 .element {
   -fx-background-radius: 15;
   -fx-background-color: #ffffff;
@@ -44,4 +51,44 @@
 .forms {
     -fx-background-radius: 25;
     -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.date {
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.date .list-cell,
+.date .text-input {
+    -fx-text-fill: #808080;
+    -fx-font-family: 'Lato';
+    -fx-font-size: 15px;
+}
+
+.combo-box1 {
+    -fx-background-radius: 15 0 0 15;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.combo-box2 {
+    -fx-background-radius: 15 0 0 15;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.combo-box {
+    -fx-background-radius: 25;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(105, 18, 18, 0.4), 9, 0, 0, 0);
+}
+
+.combo-box .list-cell,
+.combo-box .text-input {
+    -fx-text-fill: #808080;
+    -fx-font-family: 'Lato';
+    -fx-font-size: 15px;
+}
+
+.leftpanel {
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #eaac8b, #e56b6f);
 }
